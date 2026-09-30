@@ -1,18 +1,13 @@
-# MarginMate
+# MarginMitra
 
-A mobile-friendly profit calculator for small sellers, built with HTML, CSS and JavaScript.
+Mobile-first seller profit calculator using React, Vite, TypeScript, Tailwind CSS, Framer Motion and Phosphor Icons.
 
-## Features
+Run locally: npm install, then npm run dev.
+Build: npm run build. Preview: npm run preview.
+Netlify: build command npm run build; publish directory dist. Settings are included in netlify.toml.
 
-- Calculate product, packing, courier and optional extra costs.
-- Enter a selling price, rupee discount and customer delivery charge.
-- See the discount percentage, profit and margin instantly.
-- Plan a price for a desired profit.
-- Save calculations locally, share summaries and confirm deletion with a custom dialog.
-- Lucide icons, included locally with their license in `icons/LICENSE.txt`.
+Features: costs-first calculator, discount percentage, profit and margin, optional target-profit planner, local saved entries, sharing, custom delete confirmation, Calculator/Saved/Guide navigation, reduced-motion-aware animations.
 
-## Run locally
+Saved data uses the original marginmate-calculations local storage key. It stays in the browser and origin where saved; switching domains or ports does not transfer entries.
 
-Serve this directory using any static HTTP server, then open `index.html` through the server. No build, database or API key is required.
-
-Saved calculations are kept in the current browser's local storage; they do not sync across devices. Profit estimates cover only the costs entered by the user.
+Source: src/App.tsx, src/calculator.ts and src/index.css. No backend or paid API needed.
