@@ -138,3 +138,9 @@ button,summary,a[href]{transition:scale 150ms cubic-bezier(.2,.8,.2,1);-webkit-t
 button:not(:disabled):active,summary:active,a[href]:active{scale:.96}
 @media(prefers-reduced-motion:reduce){button,summary,a[href]{transition:none}button:not(:disabled):active,summary:active,a[href]:active{scale:1;filter:brightness(.94)}}
 .clear-button{padding:4px 8px;min-height:34px;gap:3px}
+
+@media(max-width:899px){
+ .mobile-bottom-bar::before{content:"";position:absolute;left:calc((100% - 100vw)/2);right:calc((100% - 100vw)/2);top:50%;bottom:calc(-10px - env(safe-area-inset-bottom));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);mask-image:linear-gradient(to bottom,transparent 0%,#000 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 100%);pointer-events:none;z-index:0}
+ .mobile-bottom-bar{isolation:auto}.mobile-bottom-bar>.floating-nav,.mobile-bottom-bar>.mobile-profile{position:relative;z-index:1;left:auto;right:auto;top:auto;bottom:auto;transform:none}
+}
+.saved-count-badge{display:inline-flex;align-items:center;align-self:flex-start;white-space:nowrap;border-radius:999px;background:#edf4ef;color:#17312e;padding:5px 10px;font-size:12px;font-weight:700;line-height:1.3}
