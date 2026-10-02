@@ -2,7 +2,7 @@
 @theme { --color-ink: #17312e; --color-lime: #c8f36a; --color-muted: #66766d; }
 :root{font-family:Inter,"Segoe UI",Arial,sans-serif;color:#17312e;background:#eef2f0;font-synthesis:none}body{margin:0}button,summary{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}input[type=number]{appearance:textfield}input::-webkit-inner-spin-button{appearance:none}summary{list-style:none}summary::-webkit-details-marker{display:none}details[open]>summary .chevron{transform:rotate(180deg)}:focus-visible{outline:3px solid #478bcb;outline-offset:3px}.panel{background:white;border:1px solid #e0e7e3;border-radius:18px;padding:20px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;border-radius:11px;padding:10px 14px;font-size:14px;font-weight:650}.hint{font-size:13px;line-height:1.65;color:#66766d}.group-heading{display:flex;align-items:center;gap:9px;margin:24px 0 18px;padding-top:22px;border-top:1px solid #edf0ee;font-size:12px;font-weight:750;letter-spacing:1px}.total{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#edf4ef;padding:14px;border-radius:12px;margin-top:20px;font-size:14px}.total strong{font-size:21px}.delete-dialog{width:min(440px,calc(100% - 32px));margin:auto;border:0;border-radius:20px;padding:24px;color:#17312e;box-shadow:0 24px 90px #10251f33}.delete-dialog::backdrop{background:#10251f80;backdrop-filter:blur(4px)}body:has(dialog[open]){overflow:hidden}@media(min-width:900px){.panel{padding:26px}}
 .desktop-nav{display:none}
-.floating-nav{left:50%;right:auto;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(360px,calc(100% - 32px));padding:6px;border:1px solid #ffffff;border-radius:999px;background:#f8faf9e8;box-shadow:0 8px 30px #17312e20,inset 0 0 0 1px #dce4df;backdrop-filter:blur(18px)}
+.floating-nav{left:50%;right:auto;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(360px,calc(100% - 32px));padding:4px;border:1px solid #ffffff;border-radius:999px;background:#f8faf9e8;box-shadow:0 8px 30px #17312e20,inset 0 0 0 1px #dce4df;backdrop-filter:blur(18px)}
 .floating-nav button{border-radius:999px;min-height:52px}
 .floating-nav button>span.absolute{border-radius:999px;background:#fff;box-shadow:0 2px 8px #17312e08}
 input:focus,input:focus-visible{outline:none;border-color:#538353;box-shadow:0 0 0 3px #eaf3e7}
@@ -70,8 +70,8 @@ button,.btn,.desktop-nav button,.floating-nav button,.floating-nav button>span.a
 @media(max-width:899px){.mobile-intro button{border-radius:32px}}
 .floating-nav{border-radius:999px;corner-shape:round}
 .floating-nav button,.floating-nav button>span.absolute{border-radius:999px;corner-shape:round}
-.group-heading>svg{box-sizing:content-box;padding:10px;background:#e6eee8;color:#17312e;border-radius:var(--button-radius);flex-shrink:0}
-@supports(corner-shape:squircle){.group-heading>svg{corner-shape:squircle}}
+.group-heading>svg,.group-heading>img{box-sizing:content-box;padding:10px;background:#e6eee8;color:#17312e;border-radius:var(--button-radius);flex-shrink:0}
+@supports(corner-shape:squircle){.group-heading>svg,.group-heading>img{corner-shape:squircle}}
 .mobile-intro h1 .hero-highlight{background:#c8f36a;color:#17312e;border-radius:8px;padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .hero-highlights{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px;font-size:13px;color:#466c5d}
 .hero-highlights li{display:flex;align-items:center;gap:6px}
@@ -82,9 +82,9 @@ button,.btn,.desktop-nav button,.floating-nav button,.floating-nav button>span.a
 .hero-highlights{margin-top:22px;gap:12px 22px}
 @media(max-width:899px){.mobile-intro{margin-bottom:30px;padding-bottom:12px}.mobile-intro h1{margin-top:10px;margin-bottom:12px}.hero-highlights{margin-top:18px;gap:12px 16px}}
 .mobile-intro h1 .hero-highlight{background:transparent;color:#527c38;padding:0;border-radius:0}
-.mobile-intro h1{font-size:36px;line-height:1.18}
+.mobile-intro h1{font-size:36px;line-height:1}
 @media(min-width:900px){
- .mobile-intro h1{font-size:52px;line-height:1.16}
+ .mobile-intro h1{font-size:52px;line-height:1}
  .app-main aside{position:sticky;top:88px;max-height:calc(100dvh - 104px);overflow-y:auto;scrollbar-width:thin;overscroll-behavior:contain}
 }
 @media(max-width:899px){
@@ -97,7 +97,7 @@ button,.btn,.desktop-nav button,.floating-nav button,.floating-nav button>span.a
 @media(max-width:899px){
  .header-tools .profile-button{display:none}
  .mobile-bottom-bar{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:9px;width:min(440px,calc(100% - 20px))}
- .mobile-bottom-bar .floating-nav{position:static;transform:none;flex:1;min-width:0;width:auto;padding:6px;border-radius:999px;background:#fffffff2;box-shadow:0 6px 24px #17312e15}
+ .mobile-bottom-bar .floating-nav{position:static;transform:none;flex:1;min-width:0;width:auto;padding:4px;border-radius:999px;background:#fffffff2;box-shadow:0 6px 24px #17312e15}
  .mobile-bottom-bar .floating-nav button{min-height:58px;padding:6px 3px;max-width:none}
  .mobile-profile{width:74px;height:74px;flex:0 0 74px;border-radius:50%;corner-shape:round;background:white;padding:5px;box-shadow:0 6px 24px #17312e15;display:grid;place-items:center}
  .mobile-profile img{width:100%;height:100%;object-fit:cover;border-radius:50%;corner-shape:round}
@@ -122,7 +122,7 @@ button,.btn,.desktop-nav button,.floating-nav button,.floating-nav button>span.a
  .mobile-bottom-bar{bottom:calc(10px + env(safe-area-inset-bottom))}
  .mobile-bottom-bar .floating-nav button{font-size:11px;font-weight:700}
 }
-.group-heading>svg{padding:7px;border-radius:12px}
+.group-heading>svg,.group-heading>img{padding:7px;border-radius:12px}
 .hero-eyes{display:inline-block;width:1.15em;height:.8em;vertical-align:-.05em;fill:#f9fcf6;stroke:#17312e;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .hero-eyes .eye-pupil{fill:#17312e;stroke:none}
 .mobile-intro>button.btn{min-height:46px;padding:10px 14px;border-radius:var(--button-radius);font-size:14px;font-weight:650}
@@ -130,3 +130,11 @@ button,.btn,.desktop-nav button,.floating-nav button,.floating-nav button>span.a
 .hero-eyes>ellipse:first-child{fill:#c8f36a}
 .hero-eyes>ellipse:nth-child(2){fill:#cfe8d6}
 .hero-eyes .eye-pupil{fill:#17312e}
+
+.saved-delete-button{width:48px;height:46px;min-height:46px;padding:0;flex-shrink:0}
+
+/* Consistent press feedback for all clickable controls. */
+button,summary,a[href]{transition:scale 150ms cubic-bezier(.2,.8,.2,1);-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button:not(:disabled):active,summary:active,a[href]:active{scale:.96}
+@media(prefers-reduced-motion:reduce){button,summary,a[href]{transition:none}button:not(:disabled):active,summary:active,a[href]:active{scale:1;filter:brightness(.94)}}
+.clear-button{padding:4px 8px;min-height:34px;gap:3px}
